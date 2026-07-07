@@ -150,6 +150,28 @@
   .cred-item .org { font-size: 11px; font-weight: 700; color: var(--cyan-dark); margin-bottom: 5px; letter-spacing: .04em; text-transform: uppercase; }
   .cred-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 5px; color: var(--navy); }
   .cred-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+  .cred-item .case-link { display: inline-block; font-size: 12px; font-weight: 600; color: var(--cyan-dark); margin-top: 8px; }
+  .cred-item .case-link:hover { text-decoration: underline; }
+
+  /* ── CASE STUDIES ── */
+  .case-study-block { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px 44px; margin-bottom: 32px; }
+  .case-study-block:last-child { margin-bottom: 0; }
+  .case-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+  .case-items { display: flex; flex-direction: column; gap: 26px; margin-bottom: 32px; }
+  .case-item { border-left: 2px solid var(--cyan-dark); padding-left: 20px; }
+  .case-item .org { font-size: 11px; font-weight: 700; color: var(--cyan-dark); margin-bottom: 6px; letter-spacing: .04em; text-transform: uppercase; }
+  .case-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--navy); }
+  .case-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+  .case-item ul { margin-top: 10px; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .case-item ul li { font-size: 14px; color: var(--text-secondary); line-height: 1.65; padding-left: 14px; position: relative; }
+  .case-item ul li::before { content: '—'; position: absolute; left: 0; color: var(--cyan-dark); font-size: 12px; }
+  .outcome-card { background: var(--bg-soft); border: 1px solid var(--border); border-top: 3px solid var(--cyan-dark); border-radius: var(--radius-lg); padding: 26px 28px; margin-bottom: 28px; }
+  .outcome-card h5 { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 14px; text-transform: uppercase; letter-spacing: .04em; }
+  .outcome-card ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .outcome-card ul li { font-size: 14px; color: var(--text-secondary); line-height: 1.7; padding-left: 20px; position: relative; }
+  .outcome-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--cyan-dark); font-weight: 700; font-size: 13px; }
+  .quote-callout { border-left: 3px solid var(--cyan); padding: 20px 24px; }
+  .quote-callout p { font-size: 15px; color: var(--navy); line-height: 1.8; font-weight: 500; }
 
   /* ── CTA BAND ── */
   .cta-band { background: var(--navy); padding: 72px 48px; text-align: center; }
@@ -174,6 +196,7 @@
     .diff-grid, .cred-grid { grid-template-columns: 1fr; gap: 32px; }
     .cta-band { padding: 56px 20px; }
     footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+    .case-study-block { padding: 28px 22px; }
   }
 </style>
 </head>
@@ -188,6 +211,7 @@
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#approach">Approach</a>
+    <a href="#case-studies">Case Studies</a>
     <a href="#about">About</a>
   </div>
   <a href="https://calendar.app.google/aAs5REm9wnszpXb37"><button class="nav-cta">Schedule a call</button></a>
@@ -415,6 +439,7 @@
         <div class="org">Morgan Stanley</div>
         <h4>Alteryx Server administration for Legal &amp; Compliance</h4>
         <p>Provided Tier 3 analytical support for the Legal and Compliance Division, delivered structured training on audit-aligned controls and documentation standards, and championed GenAI-enabled analytics patterns to accelerate reporting.</p>
+        <a href="#case-studies" class="case-link">Read the full case study →</a>
       </div>
       <div class="cred-item">
         <div class="org">TransAmerica Life Insurance</div>
@@ -438,6 +463,66 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies" class="section section-soft">
+  <div class="section-label">Case studies</div>
+  <h2>Manual data problems, solved in production</h2>
+  <p class="sub">A closer look at how specific engagements went — the situation, the actual constraints, and what changed as a result.</p>
+
+  <div class="case-study-block">
+    <div class="section-label" style="margin-bottom: 6px;">Morgan Stanley</div>
+    <h3 style="font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 10px; letter-spacing: -.3px;">Modernizing Compliance Reporting for a Global Financial Services Firm</h3>
+    <p class="sub" style="margin-bottom: 24px;">Legal and Compliance Division — embedded analytics support for the firm's global compliance metrics program.</p>
+
+    <div class="case-meta">
+      <span class="logo-pill">Legal &amp; Compliance</span>
+      <span class="logo-pill">Alteryx Server</span>
+      <span class="logo-pill">Workflow Governance</span>
+      <span class="logo-pill">Training &amp; Enablement</span>
+    </div>
+
+    <div class="case-items">
+      <div class="case-item">
+        <div class="org">The Situation</div>
+        <h4>Manual metrics, manually presented</h4>
+        <p>Morgan Stanley's Legal and Compliance Division relies on a set of global compliance metrics to demonstrate ongoing monitoring and control effectiveness — reporting that ultimately supports audit and regulatory review. These metrics lived in Excel templates, manually rebuilt each cycle and transformed into PowerPoint decks for distribution.</p>
+      </div>
+
+      <div class="case-item">
+        <div class="org">The Challenge</div>
+        <h4>Three compounding problems</h4>
+        <ul>
+          <li><strong>A manual rebuild every cycle</strong> — analysts hand-transformed Excel data into presentation-ready slides on a recurring basis, slow and exposed to error at the exact point where accuracy matters most.</li>
+          <li><strong>Human judgment inside the metric</strong> — several metrics required analyst-entered notes as part of the underlying calculation, a genuinely hard automation problem where judgment can't be removed, only the manual rebuild around it.</li>
+          <li><strong>Fragmented tooling</strong> — Alteryx had been adopted independently across multiple departments with no shared standards, so teams kept re-solving the same problems in isolation.</li>
+        </ul>
+      </div>
+
+      <div class="case-item">
+        <div class="org">The Approach</div>
+        <h4>Governed automation, not a black box</h4>
+        <p>Provided Tier 3 analytical support, unblocking analysts on complex logic in real time so reporting cycles didn't stall. Redesigned the workflow to treat analyst-entered notes as a governed input rather than a manual patch — moving the process out of Excel without removing the judgment it depended on. Delivered structured training on analytics best practices, audit-aligned controls, and documentation standards, closing the cross-department knowledge gap. Championed early adoption of GenAI-enabled analytics patterns to further accelerate reporting.</p>
+      </div>
+    </div>
+
+    <div class="outcome-card">
+      <h5>The Outcome</h5>
+      <ul>
+        <li>Reduced manual effort and improved data accuracy across the compliance metrics pipeline, cutting delivery time for key global metrics.</li>
+        <li>Introduced audit-ready documentation standards where none had existed cross-departmentally, reducing reliance on any one analyst's institutional knowledge.</li>
+        <li>Established a reusable pattern for blending analyst judgment into governed, automatable reporting — applicable anywhere compliance or legal functions combine quantitative data with qualitative sign-off.</li>
+      </ul>
+    </div>
+
+    <div class="quote-callout">
+      <p>Facing a similar Excel-to-PowerPoint reporting grind, fragmented tooling across departments, or metrics that depend on analyst judgment? This is the exact class of problem Optimus Consulting solves.</p>
+    </div>
+  </div>
+
+  <!-- Additional case-study-block entries (Fannie Mae, RGA, TransAmerica, etc.) go here as they're built -->
+
 </section>
 
 <!-- CTA BAND -->
