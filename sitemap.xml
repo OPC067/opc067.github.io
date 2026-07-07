@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.optimusconsultings.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Add one <url> entry per new page here (e.g. blog posts, standalone case study pages)
+       once they exist as separate URLs. Anchor sections (like #case-morgan-stanley)
+       don't need their own entry — they're part of the homepage URL above. -->
+</urlset>
