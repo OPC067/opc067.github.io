@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fix Your Data &amp; Reporting Problems | Optimus Consulting</title>
+<meta name="description" content="Stuck doing manual reports, messy spreadsheets, and data work only one person understands? Optimus Consulting builds automated systems so your team stops losing hours to repetitive work — trusted by the Federal Reserve, Morgan Stanley, and Fannie Mae.">
+<link rel="canonical" href="https://www.optimusconsultings.com/get-started">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:        #0e1e35;
+    --navy-mid:    #1a3050;
+    --cyan:        #7ee8e8;
+    --cyan-dark:   #3ab8b8;
+    --text-primary:   #0e1e35;
+    --text-secondary: #4a5568;
+    --text-tertiary:  #8a9bb0;
+    --border:      #e2e8f0;
+    --border-md:   #c8d4e0;
+    --bg:          #ffffff;
+    --bg-soft:     #f7fafc;
+    --green-bg:    #f0fdf4;
+    --green-text:  #166534;
+    --radius-md:   8px;
+    --radius-lg:   12px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: var(--text-primary); background: var(--bg); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: var(--navy); position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+  .nav-logo-text { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: -.2px; }
+  .nav-cta { font-size: 13px; font-weight: 600; padding: 8px 18px; border: 1px solid rgba(126,232,232,0.5); border-radius: var(--radius-md); cursor: pointer; color: var(--cyan); background: transparent; }
+
+  .hero { background: var(--bg-soft); border-left: 5px solid var(--cyan); border-bottom: 1px solid var(--border); padding: 88px 48px 80px; }
+  .hero-inner { max-width: 780px; }
+  .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cyan-dark); margin-bottom: 20px; }
+  .eyebrow::before { content: ''; width: 18px; height: 2px; background: var(--cyan-dark); border-radius: 2px; }
+  .hero h1 { font-size: 42px; font-weight: 700; line-height: 1.2; letter-spacing: -.6px; margin-bottom: 22px; color: var(--navy); }
+  .hero h1 em { font-style: normal; color: var(--cyan-dark); }
+  .hero p { font-size: 17px; line-height: 1.8; color: var(--text-secondary); max-width: 600px; margin-bottom: 36px; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { background: var(--navy); color: #fff; border: none; padding: 14px 28px; border-radius: var(--radius-md); font-size: 15px; font-weight: 600; cursor: pointer; }
+  .btn-ghost { color: var(--text-secondary); font-size: 14px; cursor: pointer; border: none; background: none; }
+
+  .logos-bar { padding: 24px 48px; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .logos-bar p { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 12px; }
+  .logos-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .logo-pill { font-size: 12px; font-weight: 500; color: var(--text-secondary); padding: 4px 12px; border: 1px solid var(--border-md); border-radius: 20px; background: var(--bg-soft); }
+
+  .section { padding: 76px 48px; }
+  .section-soft { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cyan-dark); margin-bottom: 12px; }
+  .section h2 { font-size: 28px; font-weight: 700; line-height: 1.25; letter-spacing: -.4px; margin-bottom: 14px; color: var(--navy); }
+  .section .sub { font-size: 16px; color: var(--text-secondary); line-height: 1.75; max-width: 580px; margin-bottom: 44px; }
+
+  .signs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .sign-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; display: flex; gap: 14px; align-items: flex-start; }
+  .sign-check { width: 22px; height: 22px; border-radius: 50%; background: var(--green-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .sign-check svg { stroke: var(--green-text); }
+  .sign-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .sign-card p strong { color: var(--navy); font-weight: 600; }
+
+  .steps { display: flex; flex-direction: column; gap: 0; max-width: 700px; }
+  .step { display: flex; gap: 24px; padding-bottom: 36px; position: relative; }
+  .step:not(:last-child)::before { content: ''; position: absolute; left: 19px; top: 44px; bottom: 0; width: 2px; background: var(--border); }
+  .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--cyan); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-content h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .step-content p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; max-width: 520px; }
+
+  .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .result-card { background: var(--bg); border: 1px solid var(--border); border-top: 3px solid var(--cyan-dark); border-radius: var(--radius-lg); padding: 26px; }
+  .result-card .org { font-size: 11px; font-weight: 700; color: var(--cyan-dark); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 10px; }
+  .result-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+  .trust-strip { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; margin-top: 8px; }
+  .trust-item { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
+  .trust-item svg { stroke: var(--cyan-dark); flex-shrink: 0; }
+
+  .cta-band { background: var(--navy); padding: 68px 48px; text-align: center; }
+  .cta-band h2 { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 14px; }
+  .cta-band p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 32px; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+  .btn-cta { background: var(--cyan); color: var(--navy); border: none; padding: 14px 30px; border-radius: var(--radius-md); font-size: 14px; font-weight: 700; cursor: pointer; }
+
+  footer { padding: 24px 48px; background: var(--bg-soft); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--text-tertiary); }
+  .footer-note { font-size: 11px; color: var(--text-tertiary); }
+
+  @media (max-width: 720px) {
+    nav, .logos-bar, .section { padding-left: 20px; padding-right: 20px; }
+    .hero { padding: 56px 20px 48px; }
+    .hero h1 { font-size: 28px; }
+    .cta-band { padding: 48px 20px; }
+    footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="optimus-consulting-logo.png" alt="Optimus Consulting logo">
+    <span class="nav-logo-text">Optimus Consulting</span>
+  </a>
+  <a href="https://calendar.app.google/aAs5REm9wnszpXb37"><button class="nav-cta">Schedule a call</button></a>
+</nav>
+
+<!-- HERO — plain language, no tool name -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Data &amp; reporting help for growing businesses</p>
+    <h1>Your team is spending hours on work<br><em>a computer should be doing.</em></h1>
+    <p>If your reports get rebuilt by hand every month, your data lives in a dozen spreadsheets, or one person is the only one who understands how everything actually works — that's exactly the kind of problem we fix. We build automated systems that do the repetitive work for you, so your team can focus on decisions instead of data entry.</p>
+    <div class="hero-actions">
+      <a href="https://calendar.app.google/aAs5REm9wnszpXb37"><button class="btn-primary">Talk to us — free 30-min call</button></a>
+      <a href="#how-it-works"><button class="btn-ghost">See how it works →</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<div class="logos-bar">
+  <p>Trusted with data and reporting for</p>
+  <div class="logos-row">
+    <span class="logo-pill">Federal Reserve Bank</span>
+    <span class="logo-pill">Morgan Stanley</span>
+    <span class="logo-pill">Fannie Mae</span>
+    <span class="logo-pill">TransAmerica</span>
+    <span class="logo-pill">Reinsurance Group of America</span>
+    <span class="logo-pill">Prime Therapeutics</span>
+    <span class="logo-pill">Comcast</span>
+  </div>
+</div>
+
+<!-- SIGNS YOU NEED THIS -->
+<section class="section">
+  <div class="section-label">Sound familiar?</div>
+  <h2>Signs your business has outgrown spreadsheets</h2>
+  <p class="sub">You don't need to know anything about data tools to know something's not working. If a few of these hit home, we should talk.</p>
+  <div class="signs-grid">
+    <div class="sign-card">
+      <div class="sign-check"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l3 3 4-4"/></svg></div>
+      <p><strong>Someone rebuilds the same report by hand every week or month</strong> — copying, pasting, and reformatting numbers that never really change in structure, only in values.</p>
+    </div>
+    <div class="sign-card">
+      <div class="sign-check"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l3 3 4-4"/></svg></div>
+      <p><strong>If that one person went on vacation, nobody else could produce the report</strong> — the process lives in their head, not in any documented system.</p>
+    </div>
+    <div class="sign-card">
+      <div class="sign-check"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l3 3 4-4"/></svg></div>
+      <p><strong>Numbers from different spreadsheets don't always match</strong> — and nobody's fully sure why, or which version is right.</p>
+    </div>
+    <div class="sign-card">
+      <div class="sign-check"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l3 3 4-4"/></svg></div>
+      <p><strong>An audit or compliance review would be painful</strong> — there's no clear trail showing how a number was calculated or who touched it last.</p>
+    </div>
+    <div class="sign-card">
+      <div class="sign-check"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l3 3 4-4"/></svg></div>
+      <p><strong>Your team asks IT (or a consultant) for the same kind of request over and over</strong> — because nobody's set them up to get the answer themselves.</p>
+    </div>
+    <div class="sign-card">
+      <div class="sign-check"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 5l3 3 4-4"/></svg></div>
+      <p><strong>You know you need "something better" but aren't sure what to even call it</strong> — that's fine. You don't need the vocabulary, just the problem.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="section section-soft">
+  <div class="section-label">How it works</div>
+  <h2>A straightforward process, start to finish</h2>
+  <p class="sub">No jargon, no long sales process. Just a clear path from "this is broken" to "this runs itself."</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>A free 30-minute conversation</h3>
+        <p>Tell us what's slow, manual, or frustrating about your current reporting or data process. No preparation needed — we'll ask the right questions.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>We map out what's actually happening</h3>
+        <p>We look at how the work gets done today — which spreadsheets, which manual steps, where things break — and identify exactly what can be automated.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>We build the automated system</h3>
+        <p>Using enterprise-grade tools, we build a system that does the repetitive work automatically — accurately, on schedule, with a clear record of what happened and why.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>We document it and train your team</h3>
+        <p>You get a system your team can actually run and understand — not a black box that only we can touch. Training included, not an afterthought.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS (plain-language versions of the case studies) -->
+<section class="section">
+  <div class="section-label">Real results</div>
+  <h2>What this has looked like in practice</h2>
+  <p class="sub">A couple of examples of the exact kind of problem we solve — full technical write-ups are on our main site if you want the detail.</p>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="org">Global Financial Services Firm</div>
+      <p>A compliance team was manually rebuilding reports in Excel and turning them into PowerPoint decks every reporting cycle — slow, and risky given how much accuracy mattered. We automated the rebuild, added proper documentation standards, and cut the manual work down significantly.</p>
+    </div>
+    <div class="result-card">
+      <div class="org">Reinsurance Company</div>
+      <p>A team supporting both brand-new and expert data-tool users needed to survive a major system upgrade without breaking a critical pipeline feeding their cloud data warehouse. We rebuilt the pipeline, modernized the file format, and trained the whole team through the transition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="section section-soft">
+  <div class="section-label">Why Optimus</div>
+  <h2>Built to last, not just to launch</h2>
+  <p class="sub">Some consultants hand you a finished system and disappear. We build things your own team can run, understand, and eventually extend on their own.</p>
+  <div class="trust-strip">
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>10+ years of enterprise data experience</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>Full documentation, always included</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>Team training, not just a handoff</div>
+    <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-width="1.5"><path d="M2 8l4 4 8-8"/></svg>Experience in regulated, high-stakes industries</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Not sure if this is what you need?</h2>
+  <p>That's exactly what the first call is for. No pressure, no jargon — just a conversation about what's slowing your team down.</p>
+  <a href="https://calendar.app.google/aAs5REm9wnszpXb37"><button class="btn-cta">Schedule your free call</button></a>
+</div>
+
+<footer>
+  <div>
+    <span>© 2026 Optimus Consulting LLC</span>
+  </div>
+  <span class="footer-note">Prefer more technical detail? <a href="/" style="color: var(--cyan-dark); font-weight: 600;">See our full site →</a></span>
+</footer>
+
+</body>
+</html>
